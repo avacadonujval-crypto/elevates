@@ -165,7 +165,11 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; lin
 .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--sp-5); }
 .course-card { border-radius: var(--radius-card-lg); padding: var(--sp-6); display: flex; flex-direction: column; gap: var(--sp-6); min-height: 340px; transition: all var(--dur-base); }
 .course-card--light { background: var(--white); border: 1px solid var(--border-card); box-shadow: var(--shadow-card); }
-.course-card--dark { background: var(--black-card); }
+.course-card--dark {
+  background: var(--black-card);
+}
+.course-card--dark .course-card__title { color: var(--white); }
+.course-card--dark .course-card__desc { color: rgba(255, 255, 255, 0.7); }
 
 /* --- Roadmap --- */
 .roadmap-grid { display: flex; flex-direction: column; gap: var(--sp-6); max-width: 860px; margin: auto; }
