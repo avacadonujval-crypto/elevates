@@ -46,6 +46,14 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.classList.toggle('open');
       mobileMenu.classList.toggle('header__mobile--open');
     });
+
+    // Close menu when a link is clicked
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('header__mobile--open');
+      });
+    });
   }
 
   // --- Carousel Logic ---

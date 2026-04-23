@@ -28,6 +28,21 @@
       <div class="header__actions">
         <a href="contact.html" class="btn btn--blue btn--sm">Contact</a>
       </div>
+      <div class="header__burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <div class="header__mobile">
+      <nav>
+        <ul>
+          <li><a href="#home" class="header__mobile-link">Home</a></li>
+          <li><a href="#curriculum" class="header__mobile-link">Curriculum</a></li>
+          <li><a href="#roadmap" class="header__mobile-link">Roadmaps</a></li>
+          <li><a href="contact.html" class="header__mobile-link">Contact</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -178,8 +193,9 @@
             <i data-lucide="chevron-left"></i>
           </button>
           
-          <div class="carousel-track">
-            <!-- Step 1 -->
+          <div class="carousel-track-wrap">
+            <div class="carousel-track">
+              <!-- Step 1 -->
             <div class="carousel-slide">
               <div class="roadmap-card">
                 <span class="roadmap-card__num">01</span>
@@ -230,6 +246,7 @@
               </div>
             </div>
           </div>
+        </div>
           
           <button class="carousel-btn carousel-btn--next">
             <i data-lucide="chevron-right"></i>

@@ -121,6 +121,17 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; lin
 .header__link:hover { color: var(--black); }
 .header__actions { display: flex; align-items: center; gap: var(--sp-4); }
 
+.header__burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
+.header__burger span { display: block; width: 22px; height: 2px; background: var(--black); border-radius: 2px; transition: 0.3s; }
+.header__burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.header__burger.open span:nth-child(2) { opacity: 0; }
+.header__burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.header__mobile { position: fixed; top: 58px; left: 0; right: 0; bottom: 0; background: var(--white); z-index: 299; padding: var(--sp-10); transform: translateY(-100%); transition: transform 0.4s var(--ease); visibility: hidden; }
+.header__mobile--open { transform: translateY(0); visibility: visible; }
+.header__mobile ul { display: flex; flex-direction: column; gap: var(--sp-6); }
+.header__mobile-link { font-size: var(--text-2xl); font-weight: 600; color: var(--black); }
+
 /* --- Home --- */
 .hero { display: grid; grid-template-columns: 1fr 1fr; min-height: 100vh; padding-top: 58px; }
 .hero__panel { position: relative; display: flex; align-items: flex-end; padding: var(--sp-16) var(--sp-12) var(--sp-12); overflow: hidden; }
@@ -173,8 +184,32 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; lin
 
 /* --- Roadmap --- */
 .roadmap-grid { display: flex; flex-direction: column; gap: var(--sp-6); max-width: 860px; margin: auto; }
-.roadmap-card { background: var(--white); border: 1px solid var(--border-card); border-radius: var(--radius-card-lg); padding: var(--sp-8); display: flex; gap: var(--sp-8); }
-.roadmap-card__num { font-size: var(--text-5xl); font-weight: 700; color: var(--gray-200); }
+.roadmap-card {
+  background: var(--white);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-card-lg);
+  padding: var(--sp-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+}
+
+.roadmap-card__num {
+  font-size: var(--text-3xl);
+  font-weight: 700;
+  color: var(--gray-200);
+}
+
+@media (min-width: 768px) {
+  .roadmap-card {
+    padding: var(--sp-8);
+    flex-direction: row;
+    gap: var(--sp-8);
+  }
+  .roadmap-card__num {
+    font-size: var(--text-5xl);
+  }
+}
 
 /* --- Contact Page Specific --- */
 .contact-hero { background: var(--white); border-bottom: 1px solid var(--border); padding-block: var(--sp-20) var(--sp-12); }
@@ -192,19 +227,27 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; lin
 /* --- Carousel --- */
 .carousel-container {
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   padding-block: var(--sp-8);
+  margin-inline: var(--sp-4);
+}
+
+.carousel-track-wrap {
+  overflow: hidden;
+  width: 100%;
 }
 
 .carousel-track {
   display: flex;
   gap: var(--sp-6);
   transition: transform 0.5s var(--ease);
+  padding-inline: var(--sp-4);
 }
 
 .carousel-slide {
   flex: 0 0 100%;
   max-width: 100%;
+  padding-inline: var(--sp-2);
 }
 
 .carousel-nav {
@@ -232,8 +275,8 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; lin
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   background: var(--white);
   border: 1px solid var(--border);
   border-radius: 50%;
@@ -245,17 +288,24 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; lin
   transition: all var(--dur-fast);
 }
 
+.carousel-btn svg { width: 18px; height: 18px; }
+
 .carousel-btn:hover {
   background: var(--gray-50);
   border-color: var(--black);
 }
 
-.carousel-btn--prev { left: 0; }
-.carousel-btn--next { right: 0; }
+.carousel-btn--prev { left: -10px; }
+.carousel-btn--next { right: -10px; }
 
 @media (min-width: 768px) {
+  .carousel-btn { width: 44px; height: 44px; }
+  .carousel-btn svg { width: 22px; height: 22px; }
+  .carousel-btn--prev { left: 0; }
+  .carousel-btn--next { right: 0; }
   .carousel-slide {
     flex: 0 0 calc(50% - var(--sp-3));
+    padding-inline: 0;
   }
 }
 
@@ -267,7 +317,13 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; lin
 
 /* --- Responsive --- */
 @media (max-width: 900px) {
+  .header__nav, .header__actions { display: none; }
+  .header__burger { display: flex; }
+  
   .hero { grid-template-columns: 1fr; }
+  .hero__panel { min-height: 50vh; align-items: flex-start; padding: var(--sp-12) var(--sp-6); }
+  .hero__title { font-size: var(--text-3xl); }
+  
   .values__grid, .tracks__grid, .course-grid, .about-hero__inner { grid-template-columns: 1fr; }
   .contact-body__grid { grid-template-columns: 1fr; }
 }
