@@ -134,24 +134,57 @@ h1, h2, h3, h4, h5, h6 { font-family: var(--font-display); font-weight: 600; lin
 
 /* --- Intro --- */
 .intro {
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
-  padding-block: var(--sp-20);
+  background: var(--black);
+  color: var(--white);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .intro__title {
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-size: clamp(3rem, 8vw, 6rem);
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 0.95;
   margin-bottom: var(--sp-6);
-  color: var(--black);
+  color: var(--white);
+  letter-spacing: -0.06em;
 }
 
 .intro__sub {
   font-size: var(--text-xl);
-  color: var(--gray-500);
-  max-width: 680px;
+  color: var(--gray-400);
+  max-width: 720px;
   margin-inline: auto;
+}
+
+.intro__scroll {
+  position: absolute;
+  bottom: var(--sp-10);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sp-3);
+  opacity: 0.6;
+}
+
+.intro__scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, var(--blue), transparent);
+  animation: scrollLine 2s ease-in-out infinite;
+}
+
+@keyframes scrollLine {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  50.1% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
 }
 
 /* --- Home --- */
