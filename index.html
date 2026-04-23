@@ -35,6 +35,9 @@
       </div>
     </div>
     <div class="header__mobile">
+      <div class="header__mobile-close">
+        <i data-lucide="x"></i>
+      </div>
       <nav>
         <ul>
           <li><a href="#home" class="header__mobile-link">Home</a></li>
@@ -47,23 +50,12 @@
   </header>
 
   <main>
-    <!-- --- Top Intro --- -->
-    <section class="intro">
-      <div class="intro__container">
-        <h1 class="intro__quote reveal">"The beautiful thing about learning is that no one can take it away from you."</h1>
-        <span class="intro__author reveal reveal--delay-1">— B.B. King</span>
-      </div>
-      <div class="intro__scroll reveal reveal--delay-2">
-        <span class="intro__scroll-text">Scroll to Explore</span>
-        <div class="intro__scroll-line"></div>
-      </div>
-    </section>
-
     <!-- --- Hero Section --- -->
-    <section id="home" class="hero">
+    <section id="home" class="hero noise">
+      <!-- Left Panel: Junior Track -->
       <div class="hero__panel hero__panel--light">
         <div class="hero__panel-inner">
-          <p class="label reveal">For Schools</p>
+          <p class="hero__badge-simple reveal">For Schools</p>
           <h1 class="hero__title reveal reveal--delay-1">
             Teen AI<br />Builders
           </h1>
@@ -75,31 +67,29 @@
             <span class="tag">90 Min / Week</span>
             <span class="tag">AI Builder Certificate</span>
           </div>
-          <a href="#roadmap" class="hero__link reveal reveal--delay-4">
-            Explore Teen AI Builders <i data-lucide="arrow-right" size="14"></i>
-          </a>
+          <div class="hero__actions reveal reveal--delay-4">
+            <a href="#curriculum" class="btn btn--blue">
+              Explore Teen AI Builders <i data-lucide="arrow-right" size="14"></i>
+            </a>
+          </div>
         </div>
       </div>
+
+      <!-- Right Panel: Pro Track -->
       <div class="hero__panel hero__panel--dark">
-        <div class="hero__code-bg">
-          <div class="hero__code-line" style="top: 10%; width: 60%;"></div>
-          <div class="hero__code-line" style="top: 25%; width: 40%; left: 40px;"></div>
-          <div class="hero__code-line" style="top: 40%; width: 70%;"></div>
-          <div class="hero__code-line" style="top: 55%; width: 30%; left: 60px;"></div>
-        </div>
         <div class="hero__panel-inner">
-          <span class="tag tag--dark reveal">Adults Only · Flagship Programme</span>
-          <h2 class="hero__title hero__title--white reveal reveal--delay-1">
-            AI Agentic<br />Engineering Bootcamp
-          </h2>
-          <p class="hero__desc hero__desc--muted reveal reveal--delay-2">
+          <p class="hero__badge-simple reveal" style="color: var(--gray-400);">Adults Only · Flagship Programme</p>
+          <h1 class="hero__title reveal reveal--delay-1">
+            AI Agentic Engineering Bootcamp
+          </h1>
+          <p class="hero__desc reveal reveal--delay-2">
             PHP, Java, Python, or Full Stack—become an AI Orchestrator. Master advanced AI workflows using n8n and Python logic.
           </p>
           <div class="hero__tags reveal reveal--delay-3">
             <span class="tag tag--dark">n8n & Python AI</span>
             <span class="tag tag--dark">Professional Certification</span>
           </div>
-          <div class="hero__dark-actions reveal reveal--delay-4" style="display: flex; gap: var(--sp-4);">
+          <div class="hero__actions reveal reveal--delay-4">
             <a href="contact.html" class="btn btn--blue">Inquire for Pricing</a>
             <a href="#curriculum" class="btn btn--outline-white">View Curriculum</a>
           </div>

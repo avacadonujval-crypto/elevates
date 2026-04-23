@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us | Elevate Academy</title>
+  <title>Admissions | Elevate Academy</title>
   <link rel="stylesheet" href="style.css">
   <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body class="noise">
 
   <!-- --- Header --- -->
   <header class="header">
@@ -28,7 +28,7 @@
         </ul>
       </nav>
       <div class="header__actions">
-        <a href="index.html" class="btn btn--outline-dark btn--sm">Back to Home</a>
+        <a href="index.html" class="btn btn--outline-dark btn--sm">Back to Atelier</a>
       </div>
       <div class="header__burger">
         <span></span>
@@ -37,6 +37,9 @@
       </div>
     </div>
     <div class="header__mobile">
+      <div class="header__mobile-close">
+        <i data-lucide="x"></i>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html#home" class="header__mobile-link">Home</a></li>
@@ -48,17 +51,17 @@
     </div>
   </header>
 
-  <main style="padding-top: 58px;">
+  <main>
     <!-- --- Contact Hero --- -->
     <section class="contact-hero">
-      <div class="container contact-hero__inner">
-        <div class="contact-hero__left">
-          <p class="label reveal">Get in Touch</p>
-          <h1 class="contact-hero__title reveal reveal--delay-1">
-            Dialogue starts with <em class="contact-hero__accent">intention.</em>
+      <div class="container">
+        <div class="reveal">
+          <p class="hero__badge-simple" style="margin-bottom: 1rem;">Admissions Open</p>
+          <h1 class="contact-hero__title">
+            Dialogue starts with <span class="contact-hero__accent">intention.</span>
           </h1>
-          <p class="contact-hero__sub reveal reveal--delay-2">
-            Whether you're seeking to refine your craft or have inquiries about our curriculum for teens or adults, our atelier is open for discourse.
+          <p class="contact-hero__sub">
+            Whether you're seeking to master the agentic frontier or have inquiries about our tracks for teens, our atelier is open for discourse.
           </p>
         </div>
       </div>
@@ -69,23 +72,23 @@
       <div class="container contact-body__grid">
         <div class="contact-info">
           <div class="info-card reveal">
-            <div class="squircle squircle--md squircle--blue">
-              <i data-lucide="mail" color="white" size="18"></i>
+            <div class="squircle squircle--sm squircle--blue-light" style="margin-bottom: 1rem;">
+              <i data-lucide="mail" color="#1400FF" size="18"></i>
             </div>
-            <p class="label">Direct Inquiry</p>
-            <p style="font-weight: 500;">info@elevate.com</p>
+            <p class="contact-form__label">Direct Inquiry</p>
+            <p style="font-weight: 600; font-size: 1.1rem;">admissions@elevate.edu</p>
           </div>
           <div class="info-card reveal reveal--delay-1">
-            <div class="squircle squircle--md squircle--blue">
-              <i data-lucide="phone" color="white" size="18"></i>
+            <div class="squircle squircle--sm squircle--blue-light" style="margin-bottom: 1rem;">
+              <i data-lucide="phone" color="#1400FF" size="18"></i>
             </div>
-            <p class="label">Telephone</p>
-            <p style="font-weight: 500;">+91 70222 99544</p>
+            <p class="contact-form__label">Telephone</p>
+            <p style="font-weight: 600; font-size: 1.1rem;">+91 70222 99544</p>
           </div>
         </div>
 
         <div class="contact-form-wrap reveal reveal--delay-1">
-          <h2 class="contact-form__title">Send a Message</h2>
+          <h2 style="margin-bottom: var(--sp-6);">Send a Message</h2>
           <form class="contact-form">
             <div class="contact-form__row">
               <div class="contact-form__field">
@@ -98,19 +101,19 @@
               </div>
             </div>
             <div class="contact-form__field">
-              <label class="contact-form__label">Subject</label>
+              <label class="contact-form__label">Program of Interest</label>
               <select class="contact-form__input">
                 <option>General Information</option>
-                <option>Junior Track Enrollment (Teens)</option>
-                <option>Professional Track (Adults Only)</option>
-                <option>Partnership</option>
+                <option>Teen AI Builders (13-18)</option>
+                <option>Agentic Bootcamp (Professionals)</option>
+                <option>University Partnerships</option>
               </select>
             </div>
             <div class="contact-form__field">
               <label class="contact-form__label">Message</label>
-              <textarea class="contact-form__input" style="min-height: 120px;" placeholder="Share your thoughts..."></textarea>
+              <textarea class="contact-form__input" style="min-height: 140px; resize: none;" placeholder="Share your experience and goals..."></textarea>
             </div>
-            <button type="submit" class="btn btn--blue btn--lg">Dispatch Message</button>
+            <button type="submit" class="btn btn--blue btn--lg" style="width: 100%; justify-content: center;">Dispatch Inquiry</button>
           </form>
         </div>
       </div>
@@ -121,7 +124,7 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <span class="footer__brand-name">ELEVATE ACADEMY</span>
-        <p class="footer__desc">The Intellectual Atelier for Modern Development.</p>
+        <p class="footer__desc">The Intellectual Atelier for AI Engineering.</p>
       </div>
       <p class="footer__copy">© 2026 ELEVATE ACADEMY. ALL RIGHTS RESERVED.</p>
     </div>
